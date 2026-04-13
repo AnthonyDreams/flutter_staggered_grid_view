@@ -42,11 +42,19 @@ class SliverMasonryGrid extends SliverMultiBoxAdaptorWidget {
     int? childCount,
     double mainAxisSpacing = 0,
     double crossAxisSpacing = 0,
+    ChildIndexGetter? findChildIndexCallback,
+    bool addAutomaticKeepAlives = true,
+    bool addRepaintBoundaries = true,
+    bool addSemanticIndexes = true,
   }) : this(
           key: key,
           delegate: SliverChildBuilderDelegate(
             itemBuilder,
             childCount: childCount,
+            findChildIndexCallback: findChildIndexCallback,
+            addAutomaticKeepAlives: addAutomaticKeepAlives,
+            addRepaintBoundaries: addRepaintBoundaries,
+            addSemanticIndexes: addSemanticIndexes,
           ),
           gridDelegate: SliverSimpleGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: crossAxisCount,
@@ -70,11 +78,19 @@ class SliverMasonryGrid extends SliverMultiBoxAdaptorWidget {
     int? childCount,
     double mainAxisSpacing = 0,
     double crossAxisSpacing = 0,
+    ChildIndexGetter? findChildIndexCallback,
+    bool addAutomaticKeepAlives = true,
+    bool addRepaintBoundaries = true,
+    bool addSemanticIndexes = true,
   }) : this(
           key: key,
           delegate: SliverChildBuilderDelegate(
             itemBuilder,
             childCount: childCount,
+            findChildIndexCallback: findChildIndexCallback,
+            addAutomaticKeepAlives: addAutomaticKeepAlives,
+            addRepaintBoundaries: addRepaintBoundaries,
+            addSemanticIndexes: addSemanticIndexes,
           ),
           gridDelegate: SliverSimpleGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: maxCrossAxisExtent,
